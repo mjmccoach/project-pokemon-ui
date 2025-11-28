@@ -19,12 +19,10 @@ function App() {
             </p>
             <Navbar/>
           </header>
-          <body>
-            <Routes>
-              <Route path="/account" component={Account}/>
-              <Route path="/pokemon" component={Pokemon}/>
-            </Routes>
-          </body>
+          <Routes>
+            <Route path="/account" element={<Account/>}/>
+            <Route path="/pokemon" element={<Pokemon/>}/>
+          </Routes>
         </div>
       </>
   </Router>
