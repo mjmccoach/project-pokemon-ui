@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import Navbar from './views/Navbar.js'
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
         <p>
           Project Pokemon
         </p>
+        <Navbar/>
       </header>
     </div>
   );
