@@ -1,18 +1,31 @@
 import logo from './logo.svg';
 import './App.css';
 import Navbar from './views/Navbar.js'
+import Account from './controllers/Account.js';
+import Pokemon from './controllers/Pokemon.js';
+
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Project Pokemon
-        </p>
-        <Navbar/>
-      </header>
-    </div>
+    <Router>
+      <>
+        <div className="App">
+          <header className="App-header">
+            <img src={logo} className="App-logo" alt="logo" />
+            <p>
+              Project Pokemon
+            </p>
+            <Navbar/>
+          </header>
+          <Routes>
+            <Route path="/account" element={<Account/>}/>
+            <Route path="/pokemon" element={<Pokemon/>}/>
+          </Routes>
+        </div>
+      </>
+  </Router>
   );
 }
 
