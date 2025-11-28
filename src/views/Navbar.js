@@ -2,7 +2,10 @@ import React from 'react';
 
 class Navbar extends React.Component {
     render() {
-        return <div>I'm a navbar</div>
+        return <div className="navbar">
+                <h3>Account</h3>
+                <h3>Pokemon</h3>
+               </div>
     }
 }
 
