@@ -1,12 +1,11 @@
 import React from 'react';
-import Account from '../controllers/Account.js';
-import Pokemon from '../controllers/Pokemon.js';
+import { Link } from 'react-router-dom';
 
 class Navbar extends React.Component {
     render() {
         return <div className="navbar">
-                <Account />
-                <Pokemon />
+                <Link to ="/account"><p>Account</p></Link>
+                <Link to ="/pokemon"><p>Pokemon</p></Link>
                </div>
     }
 }
