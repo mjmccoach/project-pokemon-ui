@@ -19,8 +19,8 @@ class TrainerList extends React.Component {
     }
 
     render() {
-        return <div>{this.state.trainers.map((trainer) => 
-                    <div>{trainer.name}</div>)}
+        return <div className="block">{this.state.trainers.map((trainer) => 
+                    <div className="card">{trainer.name}</div>)}
                </div>
     }
 }
