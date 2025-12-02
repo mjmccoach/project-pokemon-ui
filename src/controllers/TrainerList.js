@@ -5,18 +5,23 @@ class TrainerList extends React.Component {
     constructor() {
         super();
         this.state = {
-            trainers: []
+            trainers: [],
+            loaded: false
         }
     }
 
     componentDidMount() {
         axios('http://localhost:8081/all')
-            .then((data) => {this.setState({trainers: data})
+            .then((response) => {
+                console.log("data ", response);
+                this.setState({trainers: response.data, loaded: true})
                 });
     }
 
     render() {
-        return <h3>TrainerList Component</h3>
+        return <div>{this.state.trainers.map((trainer) => 
+                    <div>{trainer.name}</div>)}
+               </div>
     }
 }
 
