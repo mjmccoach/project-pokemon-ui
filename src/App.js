@@ -22,7 +22,7 @@ function App() {
             <Navbar/>
           </header>
           <Routes>
-            <Route path="/account" element={<Account/>}/>
+            <Route path="/account/:id" element={<Account/>}/>
             <Route path="/pokemon" element={<Pokemon/>}/>
             <Route path="/trainerlist" element={<TrainerList/>}/>
           </Routes>
