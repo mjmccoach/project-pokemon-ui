@@ -49,10 +49,26 @@
   border-radius: 9px;
   margin-right: 5rem;
   margin-bottom: 2.5rem;
+
+  span {
+    display: block;
+  }
 }
 
 .block {
   display: inline-grid;
   grid-template-columns: auto auto auto;
   text-align: center;
+}
+
+.water {
+  background-color: #5f95ed;
+}
+
+.fire {
+  background-color: #e05c24;
+}
+
+.grass {
+  background-color: #9bd164;
 }
