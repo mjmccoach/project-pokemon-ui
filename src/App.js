@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import Navbar from './views/Navbar.js'
 import Account from './controllers/Account.js';
