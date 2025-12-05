@@ -1,33 +1,31 @@
-import React from "react";
+import { useState, useEffect } from 'react'; 
 import axios from "axios";
 import { Link } from "react-router-dom";
 
 
-class TrainerList extends React.Component {
-    constructor() {
-        super();
-        this.state = {
-            trainers: [],
-            loaded: false
-        }
-    }
+function TrainerList () {
+    
+       
+    const [trainers, setTrainers] = useState([]);
+    const [loaded, setLoaded] = useState(false);
 
-    componentDidMount() {
-        axios('http://localhost:8081/all')
+
+    useEffect(() => {
+        axios('http://localhost:8081/trainer/all')
             .then((response) => {
-                this.setState({trainers: response.data, loaded: true})
+                setTrainers(response.data);
+                setLoaded(true);
                 });
-    }
+    });
 
-    render() {
-        return <div className="block">{this.state.trainers.map((trainer) => 
-                    <div className="card">
-                        <Link to={`/account/${trainer.id}`}>
-                            {trainer.name}
-                        </Link>
-                    </div>)}
-               </div>
-    }
+    return (<div className="block">{trainers.map((trainer) => 
+                <div className="card">
+                    <Link to={`/account/${trainer.id}`}>
+                        {trainer.name}
+                    </Link>
+                </div>)}
+            </div>
+    )
 }
 
 export default TrainerList;

@@ -4,12 +4,10 @@ import Account from './controllers/Account.js';
 import Pokemon from './controllers/Pokemon.js';
 import TrainerList from './controllers/TrainerList.js';
 
-
-
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-
 function App() {
+  
   return (
     <Router>
       <>
