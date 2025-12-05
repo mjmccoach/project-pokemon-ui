@@ -4,14 +4,9 @@ import Account from './controllers/Account.js';
 import Pokemon from './controllers/Pokemon.js';
 import TrainerList from './controllers/TrainerList.js';
 
-
-
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { useParams } from "react-router";
-
 
 function App() {
-  console.log("Params are ", useParams());
   
   return (
     <Router>

@@ -9,7 +9,6 @@ function Account() {
     const [loaded, setLoaded] = useState(false);
 
     
-    console.log("AccountId ", accountId);
     useEffect(() => {
         axios(`http://localhost:8081/trainer/${accountId}`)
             .then((response) => {
