@@ -11,7 +11,7 @@ function Account() {
     
     console.log("AccountId ", accountId);
     useEffect(() => {
-        axios(`http://localhost:8081/${accountId}`)
+        axios(`http://localhost:8081/trainer/${accountId}`)
             .then((response) => {
                 setAccount(response.data);
                 setLoaded(true);
@@ -21,7 +21,7 @@ function Account() {
     return (
         
         <>
-            {loaded && (<h3>Account Component</h3>)}
+            {loaded && (<h3>{account.name}</h3>)}
         </>  
     )
 }

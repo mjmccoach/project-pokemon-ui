@@ -11,7 +11,7 @@ function TrainerList () {
 
 
     useEffect(() => {
-        axios('http://localhost:8081/all')
+        axios('http://localhost:8081/trainer/all')
             .then((response) => {
                 setTrainers(response.data);
                 setLoaded(true);
