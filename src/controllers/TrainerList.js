@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'; 
 import axios from "axios";
 import { Link } from "react-router-dom";
-
+import Preloader from '../views/Preloader.js';
 
 function TrainerList () {
        
@@ -16,6 +16,10 @@ function TrainerList () {
                 setLoaded(true);
                 });
     });
+
+    if (!loaded) {
+        return <Preloader/>
+    }
 
     return (<div className="block">{trainers.map((trainer) => 
                 <div className="card">
