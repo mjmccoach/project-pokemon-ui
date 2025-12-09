@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 
 
 function TrainerList () {
-    
        
     const [trainers, setTrainers] = useState([]);
     const [loaded, setLoaded] = useState(false);
