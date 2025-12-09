@@ -1,6 +1,7 @@
 import { useParams } from "react-router";
 import { useState, useEffect } from 'react'; 
 import axios from "axios";
+import Preloader from '../views/Preloader.js';
 
 function Account() {
     const accountId = useParams()["id"];
@@ -17,10 +18,13 @@ function Account() {
                 });
     });
 
+    if (!loaded) {
+        return <Preloader/>;
+    }
+
     return (
-        
         <>
-            {loaded && (<h3>{account.name}</h3>)}
+            <h3>{account.name}</h3>
         </>  
     )
 }

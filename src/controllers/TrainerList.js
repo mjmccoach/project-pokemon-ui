@@ -18,7 +18,7 @@ function TrainerList () {
     });
 
     if (!loaded) {
-        return <Preloader/>
+        return <Preloader/>;
     }
 
     return (<div className="block">{trainers.map((trainer) => 
