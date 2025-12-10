@@ -15,7 +15,7 @@ function TrainerList () {
                 setTrainers(response.data);
                 setLoaded(true);
                 });
-    });
+    }, []);
 
     if (!loaded) {
         return <Preloader/>;
