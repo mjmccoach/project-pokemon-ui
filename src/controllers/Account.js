@@ -15,11 +15,12 @@ function Account() {
             .then((response) => {
                 setAccount(response.data);
                 });
+
         axios(`http://localhost:8082/trainers/pokemon/trainer/${accountId}`)
-        .then((pokemonResponse) => {
-            setTrainerPokemon(pokemonResponse.data);
-            setLoaded(true);
-        });
+            .then((pokemonResponse) => {
+                setTrainerPokemon(pokemonResponse.data);
+                setLoaded(true);
+                });
     }, []);
 
     if (!loaded) {
@@ -29,6 +30,7 @@ function Account() {
     return (
         <>
             <h3>{account.name}</h3>
+            <h4>Pokemon</h4>
             <div className="block">{trainerPokemon.map((pokemon) => 
                         <div className={`card ${pokemon.pokemonBase.primaryType.toLowerCase()}`}>
                             <span>#{pokemon.id}</span>
